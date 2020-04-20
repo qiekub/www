@@ -8,6 +8,10 @@
     ],
     "rewrites": [
       {
+        "source": "impressum.html",
+        "destination": "/impressum.html"
+      },
+      {
         "source": "datenschutz.html",
         "destination": "/datenschutz.html"
       },
