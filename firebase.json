@@ -8,6 +8,10 @@
     ],
     "rewrites": [
       {
+        "source": "datenschutz.html",
+        "destination": "/datenschutz.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
