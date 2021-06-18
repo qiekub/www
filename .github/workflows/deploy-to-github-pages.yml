@@ -1,7 +1,8 @@
-# This is a workflow to deploy the react code to GitHub Pages.
-name: Deploy to Uberspace via GitHub Pages
+# This is a basic workflow to help you get started with Actions
 
-# Controls when the action will run.
+name: Deploy
+
+# Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -30,21 +31,13 @@ jobs:
         run: yarn
       - name: Add gh-pages as a dev-dependency
         run: yarn add --dev gh-pages
-      #- name: Build ReactJS App
-      #  run: yarn build
+      # - name: Build ReactJS App
+      #   run: yarn build
       - name: Deploy to GitHub Pages
         uses: Cecilapp/GitHub-Pages-deploy@3.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           email: thomas.rosen@me.com
-          build_dir: build
-          cname: ""
-      - name: run deploy commands on uberspace
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: |
-            cd ~/www/ && git checkout gh-pages && git pull && supervisorctl restart www;
-          host: giclas.uberspace.de
-          username: qiekub
-          password: ${{ secrets.UBERSPACE_PASSWORD_QIEKUB }}
+          build_dir: public
+          cname: www.qiekub.org
