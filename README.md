@@ -1,3 +1,3 @@
 # main website of qiekub
 
-Go to [https://map.qiekub.org/](map.qiekub.org) for the QueerMap.
+Go to [map.qiekub.org](https://map.qiekub.org/) for the QueerMap.
